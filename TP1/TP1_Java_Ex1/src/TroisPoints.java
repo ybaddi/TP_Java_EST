@@ -33,4 +33,13 @@ public class TroisPoints {
     public void setTroisieme(Point troisieme) {
         this.troisieme = troisieme;
     }
+
+    public boolean sontAlignes(){
+        double ab = premier.calculeDistance(deuxieme);
+        double ac = premier.calculeDistance(troisieme);
+        double bc = deuxieme.calculeDistance(troisieme);
+        if(ab == ac+bc || bc == ac+ab || ac == ab+bc)
+            return true;
+        else return false;
+    }
 }

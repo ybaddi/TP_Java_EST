@@ -77,7 +77,7 @@ public Point calculeMilieu(Point p){
         System.out.println(p);
         System.out.println(p.calculeDistance(p2));
 
-        System.out.println(p.calculerMilieu(p2));
+        System.out.println(p.calculeMilieu(p2));
     }
 
 }
