@@ -36,6 +36,10 @@ public double calculeDistance(Point p){
         return Math.sqrt(Math.pow(abs - p.getAbs() , 2) + Math.pow(ord - p.getOrd() , 2) );
 }
 
+public Point calculerMilieu(Point p){
+    return new Point((abs + p.getAbs())/2,(ord + p.getOrd())/2);
+}
+
     public static void main( String[] args){
         Point p = new Point(14,15);
 
@@ -44,6 +48,8 @@ public double calculeDistance(Point p){
 //        p.setOrd(13.69);
         System.out.println(p);
         System.out.println(p.calculeDistance(p2));
+
+        System.out.println(p.calculerMilieu(p2));
     }
 
 }
