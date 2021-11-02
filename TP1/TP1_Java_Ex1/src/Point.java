@@ -3,6 +3,11 @@ public class Point {
     private double ord;
 
 
+    public Point(double abs, double ord) {
+        this.abs = abs;
+        this.ord = ord;
+    }
+
     public double getAbs() {
         return abs;
     }
@@ -26,6 +31,7 @@ public class Point {
                 ", ord=" + ord +
                 '}';
     }
+
 
 
     public static void main( String[] args){
