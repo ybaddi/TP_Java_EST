@@ -1,3 +1,4 @@
+import java.util.Calendar;
 import java.util.Date;
 
 public class MaDate {
@@ -52,10 +53,22 @@ public class MaDate {
 
     // TODO propose a noter solution for ajouterUnJour
 
+    public void ajouterUnJour(boolean t){
+        // all month have 31 day
+        Date dt = new Date();
+
+        Calendar dr = Calendar.getInstance();
+        dr.set(annee, mois,jour);
+        dr.add(Calendar.DATE,1);
+        jour = dr.get(Calendar.DAY_OF_YEAR);
+        mois = dr.get(Calendar.MONTH) +1;  // Jan = 0, fev = 1
+        annee = dr.get(Calendar.YEAR);
+    }
+
 
     public void ajouterPlusieursJour(int nbrMois){
-        for(int i=0; i <= nbrMois){
-            ajouterUnJour();
+        for(int i=0; i <= nbrMois; i++){
+            ajouterUnJour(true);
         }
     }
 
@@ -82,7 +95,7 @@ public class MaDate {
     public static void main(String[] args) {
         MaDate dt = new MaDate(31,11,202);
         System.out.println(dt);
-        dt.ajouterUnJour();
+        dt.ajouterUnJour(true);
         System.out.println(dt);
         dt.ajouterPlusieursJour(30);
         System.out.println(dt);
