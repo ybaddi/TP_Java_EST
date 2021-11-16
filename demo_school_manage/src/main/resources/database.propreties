@@ -1,0 +1,3 @@
+url=jdbc:mysql://database-2.czebohxzydks.us-east-2.rds.amazonaws.com:3306/school_management?useSSL=false&serverTimezome=UTC
+user=admin
+password=baddiroot
